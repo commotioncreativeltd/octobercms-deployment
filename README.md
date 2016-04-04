@@ -20,6 +20,10 @@ php artisan october:up
 12. push to github
 13. deploy once in forge
 14. Install a site locally and install a site on your forge location ("from scratch")
+15. delete `config` folder on forge
+```
+rm -rf config/
+```
 15. Delete install.php and /install_files locally
 16. create .gitignore locally:
 ```
