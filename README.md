@@ -86,16 +86,16 @@ password: admin
 ```
 10. clear the `README.md` file
 11. remove the `October.Demo` plugin
-12. add git repo into desktop app, commit to `master` then sync
-13. create `dev` and `web` branch and publish to github
+12. create a project at [October CMS - Projects](https://octobercms.com/account/project/dashboard)
+13. add all required plugins to the project [October CMS Plugins](https://octobercms.com/plugins)
+14. sync the plugins to local
+15. clone any private plugins from Git then run `php artisan october:up`
+16. add git repo into desktop app, commit to `master` then sync
+17. create `dev` and `web` branch and publish to github
 
 
-
-4. commit all changes and push to repo
-3. create `dev` and `web` branch and publish to github
-4. make new forge site:
+4. make new forge site
 5. remove "public" Web Directory
-6. make site
 7. connect to `web` repo
 8. uncheck "Install Composer Dependencies" repository
 9. edit deploy script: remove 2 lines:
@@ -108,6 +108,28 @@ add line:
 php artisan october:up
 ```
 10. Turn on Quick Deploy in Forge
+11. Deploy now (this will fail)
+12. stop NGIX and MySQL services and run `composer install`
+13. restart Ngix and MySQL services
+14. create a `.env` for production
+14. run `php artisan october:up`
+15. setup SSL certificate
+16. set your active theme `php artisan theme:use myproject-theme`
+17. login to the website and change default admin details
+```
+username: admin
+password: admin
+```
+18. attach forge install to project
+19. download plugins
+20. clone any private plugins from Git then run `php artisan october:up`
+
+
+# sync from forge
+1. commit changes from server and push to `web` branch
+2. using desktop app sync `web` branch then merge it into `dev` branch
+3. to complete merge `dev` into `master`
+
 11. download october installer on local system
 12. push to github
 13. deploy once in forge
