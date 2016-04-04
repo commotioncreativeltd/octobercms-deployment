@@ -33,8 +33,6 @@ rm -rf config/
 /vendor
 /storage
 /plugins
-/modules
-/bootstrap
 /themes/demo
 /themes/**/assets/node_modules
 .htaccess
