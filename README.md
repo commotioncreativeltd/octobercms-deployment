@@ -27,6 +27,7 @@ rm -rf config/
 15. Delete install.php and /install_files locally
 16. create .gitignore locally:
 ```
+.env
 .DS_Store
 *.log
 /vendor
@@ -37,6 +38,8 @@ rm -rf config/
 /themes/demo
 /themes/**/assets/node_modules
 .htaccess
+artisan
+index.php
 ```
 17. update config files
 
