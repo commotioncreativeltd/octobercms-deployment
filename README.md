@@ -69,11 +69,10 @@ php artisan october:up
         'secret' => env('SERVICES_MAILGUN_SECRET', ''),
     ],
 ```
-
-
-
+1. create local and production `.env` files with the following:
+```
 DB_HOST=localhost
-DB_DATABASE=commotion
+DB_DATABASE=homestead
 DB_USERNAME=homestead
 DB_PASSWORD=secret
 
@@ -81,12 +80,14 @@ CMS_ROUTE_CACHE=false
 CMS_ASSET_CACHE=false
 CMS_CSRF=false
 
-APP_URL='http://commotion.local'
+APP_URL='http://www.yourdomain.com'
 APP_LOCALE=en
 
 MAIL_DRIVER=mailgun
+MAIL_ADDRESS='no-reply@domain.com'
+MAIL_NAME='Administrator'
+MAIL_PRETEND=false
 
 SERVICES_MAILGUN_DOMAIN=''
 SERVICES_MAILGUN_SECRET=''
 ```
-10. commit changes to `dev` and `web`
