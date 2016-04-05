@@ -21,6 +21,22 @@ cd myproject
 	'enableRoutesCache' => env('CMS_ROUTE_CACHE', false),
 	...
 	'enableAssetCache' => env('CMS_ASSET_CACHE', false),
+	...
+	'storage' => [
+	
+	        'uploads' => [
+	            'disk'   => 's3',
+	            'folder' => 'uploads',
+	            'path'   => 'https://s3-'.env('FILE_AWS_REGION','').'.amazonaws.com/'.env('FILE_AWS_BUCKET', '').'/uploads/',
+	        ],
+	
+	        'media' => [
+	            'disk'   => 's3',
+	            'folder' => 'media',
+	            'path'   => 'https://s3-'.env('FILE_AWS_REGION','').'.amazonaws.com/'.env('FILE_AWS_BUCKET', '').'/media/',
+	        ],
+	
+	    ],
 ```
 **database.php**
 ```
@@ -29,6 +45,18 @@ cd myproject
 	'database'  => env('DB_DATABASE', 'homestead'),
 	'username'  => env('DB_USERNAME', 'homestead'),
 	'password'  => env('DB_PASSWORD', 'secret'),
+```
+**filesystem.php**
+```
+	'default' => env('FILE_DEFAULT', 'local'),
+	...
+	's3' => [
+            'driver' => env('FILE_AWS_DRIVER', 's3'),
+            'key'    => env('FILE_AWS_KEY', ''),
+            'secret' => env('FILE_AWS_SECRET', ''),
+            'region' => env('FILE_AWS_REGION', ''),
+            'bucket' => env('FILE_AWS_BUCKET', ''),
+        ],
 ```
 **mail.php**
 ```
@@ -209,4 +237,11 @@ MAIL_PRETEND=false
 
 SERVICES_MAILGUN_DOMAIN=''
 SERVICES_MAILGUN_SECRET=''
+
+FILE_DEFAULT='s3'
+FILE_AWS_DRIVER='s3'
+FILE_AWS_KEY=''
+FILE_AWS_SECRET=''
+FILE_AWS_REGION=''
+FILE_AWS_BUCKET=''
 ```
