@@ -95,6 +95,13 @@ MAIL_PRETEND=false
 
 SERVICES_MAILGUN_DOMAIN=''
 SERVICES_MAILGUN_SECRET=''
+
+FILE_DEFAULT='s3'
+FILE_AWS_DRIVER='s3'
+FILE_AWS_KEY=''
+FILE_AWS_SECRET=''
+FILE_AWS_REGION=''
+FILE_AWS_BUCKET=''
 ```
 
 6. run the `php artisan october:up` command in initialize October CMS
@@ -128,7 +135,6 @@ password: admin
 8. uncheck "Install Composer Dependencies" repository
 9. edit deploy script: remove 2 lines:
 ```
-composer install --no-interaction --no-dev --prefer-dist
 php artisan migrate --force
 ```
 add line:
