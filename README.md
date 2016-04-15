@@ -176,17 +176,56 @@ rm -rf config/
 15. Delete install.php and /install_files locally
 16. create .gitignore locally:
 ```
-.env
-.DS_Store
+# Numerous always-ignore extensions
+*.bak
+*.diff
+*.err
+*.orig
 *.log
+*.rej
+*.swo
+*.swp
+*.vi
+*.idea
+.sass-cache
+composer.phar
+.env
+.env.*.php
+.env.php
+php_errors.log
+nginx-error.log
+nginx-access.log
+nginx-ssl.access.log
+nginx-ssl.error.log
+php-errors.log
+sftp-config.json
+selenium.php
+composer.lock
+
+# OS or Editor folders
+.DS_Store
+._*
+Thumbs.db
+.cache
+.project
+.settings
+.tmproj
+nbproject
+*.sublime-project
+*.sublime-workspace
+
+# Dreamweaver added files
+_notes
+dwsync.xml
+
+# folders to ignore
+node_modules
+bower_components
+/bootstrap/compiled.php
 /vendor
-/storage
-/plugins
-/themes/demo
-/themes/**/assets/node_modules
-.htaccess
-artisan
-index.php
+
+# for netbeans
+nbproject
 ```
 17. update config files
 
