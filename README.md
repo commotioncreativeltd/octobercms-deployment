@@ -104,6 +104,7 @@ FILE_AWS_REGION=''
 FILE_AWS_BUCKET=''
 ```
 
+6. create a database with homestead
 6. run the `php artisan october:up` command in initialize October CMS
 7. login to the website and change default admin details
 ```
