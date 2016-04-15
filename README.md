@@ -114,11 +114,60 @@ password: admin
 8. create a new blank theme, activate it and delete the demo theme
 9. update the `.gitignore` file
 ```
-...
+# Numerous always-ignore extensions
+*.bak
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*.idea
+.sass-cache
+composer.phar
+.env
+.env.*.php
+.env.php
+php_errors.log
+nginx-error.log
+nginx-access.log
+nginx-ssl.access.log
+nginx-ssl.error.log
+php-errors.log
+sftp-config.json
+selenium.php
+composer.lock
+
+# OS or Editor folders
+.DS_Store
+._*
+Thumbs.db
+.cache
+.project
+.settings
+.tmproj
+nbproject
+*.sublime-project
+*.sublime-workspace
+
+# Dreamweaver added files
+_notes
+dwsync.xml
+
+# folders to ignore
+node_modules
+bower_components
+/bootstrap/compiled.php
+/vendor
+
+# for netbeans
+nbproject
+
 # more folders
 /themes/**/assets/node_modules
 /themes/demo
-/plugins
 ```
 10. clear the `README.md` file
 11. remove the `October.Demo` plugin
