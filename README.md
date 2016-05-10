@@ -1,4 +1,4 @@
-1. make new empty repo in github
+1. make new repo in github
 2. install October CMS locally (removing existing VSC when promoted)
 ```
 composer create-project october/october myproject dev-master
@@ -14,6 +14,8 @@ cd myproject
 
 **app.php**
 ```
+    'debug' => enc('APP_DEBUG', true),
+    ...
     'url' => env('APP_URL', 'http://localhost'),
 ```
 **cms.php**
